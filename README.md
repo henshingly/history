@@ -15,7 +15,7 @@ Addon für den LMO.
 
 Mit diesem Addon erstellst Du aus Ligadateien des LMO, aus mehreren Spielzeiten, eine History Tabelle.
 
-### Installation
+## Installation
 
 Die vier Verzeichnisse des Downloads in den root Ordner des LMO kopieren.
 
@@ -103,6 +103,7 @@ $his_template='mytemplate'
 ```
 
 ___
+## Beispiele
 [Beispielseite](http://lmo8.bplaced.net/history.php) für die Einbindung per `ìnclude()`
 
 Der Code dieser PHP-Beispielseite lautet
@@ -142,7 +143,7 @@ With this addon you can create a history table from LMO league files from severa
 > Running (Liga Manager Online [(LMO-classic)](https://github.com/henshingly/lmo_php8)  
 > PHP: >7.4
 
-### Installation
+## Installation
 
 Copy the four directories of the download into the root folder of the LMO.
 
@@ -230,6 +231,8 @@ $his_template=‘mytemplate’
 ```
 
 ___
+
+## Examples
 [Example page](http://lmo8.bplaced.net/history_eng.php?lmouserlang=English) for integration via `ìnclude()`
 
 The code of this PHP-example page is
