@@ -48,8 +48,8 @@ URL-Parameter:
   * 0   //Standartsortierung nach Punkten
   * 1   //Sortierung nach Spielen
   * 2   //Sortierung nach Siegen
-  * 3   //Sortierung nach Toren
-  * 4   //Sortierung nach Punkte pro Spiel
+  * 3   //Sortierung nach Unentschieden
+  * 4   //Sortierung nach Niederlagen
   * 5   //Sortierung nach +Toren
   * 6   //Sortierung nach Diff. +Tore/-Tore
   * 7   //Sortierung nach Ø Punkte pro Spiel
@@ -173,10 +173,10 @@ URL parameter:
 * `his_folder` //Folder with the league archive
 * `his_sort` //Sort default of the perpetual table
   * 0  //Sorting by points (default)
-  * 1  //Sort by games
-  * 2  //Sort by wins
-  * 3  //Sorting by goals
-  * 4  //Sorting by points per game
+  * 1  //Sorted by victories
+  * 2  //Sorted by draw
+  * 3  //Sorted by defeats
+  * 4  //Sorting by games
   * 5  //Sorting by +goals
   * 6  //Sorting by diff. +goals/goals
   * 7  //Sorting by average points per game
