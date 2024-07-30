@@ -1,0 +1,19 @@
+000=[<acronym title='Addon history für den LMO © Marcus Schug'>©</acronym>]
+001=Ewige Tabelle
+002=Meister
+003=Abstieg
+004=
+005=Fehler: Liga nicht gefunden!
+006=
+007=<acronym title='Sortierung nach Anzahl der Meisterschaften'>M</acronym>
+008=<acronym title='Sortierung nach Anzahl der Abstiege'><b>&#9660;</b></acronym>
+009=<acronym title='Sortierung nach Spielzeiten'>S</acronym>
+010=<acronym title='Sortierung nach Partien'>Spiele</acronym>
+011=<acronym title='Sortierung nach Siegen'>S</acronym>
+012=<acronym title='Sortierung nach Unentschieden'>U</acronym>
+013=<acronym title='Sortierung nach Niederlagen'>N</acronym>
+014=<acronym title='Sortierung nach Torverhältnis'>Torverhältnis</acronym>
+015=<acronym title='Sortierung nach Tordifferenz'>Diff.</acronym>
+016=<acronym title='Sortierung nach erzielten Punkten'>Punkten</acronym>
+017=<acronym title='Sortierung nach Punkteverhältnis'>Diff.</acronym>
+018=<acronym title='Sortierung nach Durchschnitt Punkte pro Spiel'>Ø</acronym>

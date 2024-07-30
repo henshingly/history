@@ -1,0 +1,19 @@
+000=[<acronym title='Historie doplňků pro LMO © Marcus Schug'>©</acronym>]
+001=Věčný stůl
+002=Mistr
+003=Klesání
+004=
+005=Chyba: Liga nenalezena!
+006=
+007=<acronym title='Řazení podle počtu šampionátů'>C</acronym>
+008=<acronym title='Řazení podle počtu sestupů'><b>&#9660;</b></acronym>
+009=<acronym title='Řazení podle herních časů'>HC</acronym>
+010=<acronym title='Řazení podle her'>Hry</acronym>
+011=<acronym title='Řazení podle výher'>V</acronym>
+012=<acronym title='Seřadit podle kravaty'>R</acronym>
+013=<acronym title='Řazení podle porážek'>Z</acronym>
+014=<acronym title='Řazení podle gólového rozdílu'>Brankový rozdíl</acronym>
+015=<acronym title='Řazení podle gólového rozdílu'>Roz.</acronym>
+016=<acronym title='Řazení podle získaných bodů'>Body</acronym>
+017=<acronym title='Řazení podle poměru bodů'>Roz.</acronym>
+018=<acronym title='Řazení podle průměru bodů na hru'>Ø</acronym>

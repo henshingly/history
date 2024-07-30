@@ -1,0 +1,19 @@
+000=[<acronym title='Addon története az LMO-hoz © Marcus Schug'>©</acronym>]
+001=Örök asztal
+002=Bajnok
+003=Származás
+004=
+005=Hiba: A bajnokság nem található!
+006=
+007=<acronym title='Rendezés a bajnokságok száma szerint'>B</acronym>
+008=<acronym title='Sortierung nach Anzahl der AbstiegeRendezés a kiesések száma szerint'><b>&#9660;</b></acronym>
+009=<acronym title='Rendezés játékidő szerint'>LI</acronym>
+010=<acronym title='Rendezés játékok szerint'>Játékok</acronym>
+011=<acronym title='Nyeremények szerinti rendezés'>N</acronym>
+012=<acronym title='Rendezés nyakkendő szerint'>H</acronym>
+013=<acronym title='Vereségek szerinti válogatás'>E</acronym>
+014=<acronym title='Rendezés gólkülönbség szerint'>Gólkülönbség</acronym>
+015=<acronym title='Rendezés gólkülönbség szerint'>Kül.</acronym>
+016=<acronym title='Rendezés szerzett pontok szerint'>Pontok</acronym>
+017=<acronym title='Rendezés pontarány szerint'>Kül.</acronym>
+018=<acronym title='Rendezés játékonkénti átlagpontok szerint'>Ø</acronym>

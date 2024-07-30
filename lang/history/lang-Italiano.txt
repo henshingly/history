@@ -1,0 +1,19 @@
+000=[<acronym title='Addon history per l'LMO © Marcus Schug'>©</acronym>]
+001=Tavola eterna
+002=Campione
+003=Discesa
+004=
+005=Errore: Lega non trovata!
+006=
+007=<acronym title='Ordinamento per numero di campionati'>C</acronym>
+008=<acronym title='Ordinamento per numero di retrocessioni'><b>&#9660;</b></acronym>
+009=<acronym title='Ordinamento per tempi di gioco'>S</acronym>
+010=<acronym title='Ordinamento per Partite di calcio'>Partite</acronym>
+011=<acronym title='Ordinamento per vittorie'>V</acronym>
+012=<acronym title='Ordina per cravatta'>D</acronym>
+013=<acronym title='Ordinamento per sconfitte'>P</acronym>
+014=<acronym title='Ordinamento per differenza reti'>Differenza reti</acronym>
+015=<acronym title='Ordinamento per differenza reti'>Diff.</acronym>
+016=<acronym title='Ordinamento per punti segnati'>Punti</acronym>
+017=<acronym title='Ordinamento per rapporto punti'>Diff.</acronym>
+018=<acronym title='Ordinamento per punti medi per partita'>Ø</acronym>

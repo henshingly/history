@@ -1,0 +1,19 @@
+000=[<acronym title='Addon history for the LMO © Marcus Schug'>©</acronym>]
+001=Eternal table
+002=Champion
+003=Relegat
+004=
+005=Error: League not found!
+006=
+007=<acronym title='Sorting by number of championships'>C</acronym>
+008=<acronym title='Sorting by number of relegations'>↓</acronym>
+009=<acronym title='Sorting by Play Times'>PT</acronym>
+010=<acronym title='Sorting by games'>Games</acronym>
+011=<acronym title='Sort by wins'>W</acronym>
+012=<acronym title='Sort by draw'>D</acronym>
+013=<acronym title='Sort by lost'>L</acronym>
+014=<acronym title='Sorting by goal'>Goals</acronym>
+015=<acronym title='Sorting by goal difference'>Diff.</acronym>
+016=<acronym title='Sorting by points scored'>Points</acronym>
+017=<acronym title='Sorting by point ratio'>Diff.</acronym>
+018=<acronym title='Sorting by average points per game'>Ø</acronym>	

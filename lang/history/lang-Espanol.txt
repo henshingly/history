@@ -1,0 +1,19 @@
+000=[<acronym title='Addon history para el LMO© Marcus Schug'>©</acronym>]
+001=Mesa Eterna
+002=Campeón
+003=Descendencia
+004=
+005=Error: ¡Liga no encontrada!
+006=
+007=<acronym title='Ordenar por número de campeonatos'>C</acronym>
+008=<acronym title='Ordenar por número de descensos'><b>&#9660;</b></acronym>
+009=<acronym title='Ordenar por tiempos de juego'>TJ</acronym>
+010=<acronym title='Ordenar por juegos'>J</acronym>
+011=<acronym title='Ordenar por victorias'>G</acronym>
+012=<acronym title='Ordenar por empate'>D</acronym>
+013=<acronym title='Ordenando por derrotas'>P</acronym>
+014=<acronym title='Ordenar por diferencia de goles'>Diferencia de goles</acronym>
+015=<acronym title='Ordenar por diferencia de goles'>Dif.</acronym>
+016=<acronym title='Ordenar por puntos anotados'>Puntos</acronym>
+017=<acronym title='Ordenar por proporción de puntos'>Dif.</acronym>
+018=<acronym title='Ordenar por puntos promedio por juego'>Ø</acronym>

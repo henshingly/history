@@ -1,0 +1,19 @@
+000=[<acronym title='Historija dodatka za LMO © Marcus Schug'>©</acronym>]
+001=Vječna trpeza
+002=Majstor
+003=Spuštanje
+004=
+005=Greška: Liga nije pronađena!
+006=
+007=<acronym title='Sortiranje po broju prvenstava'>P</acronym>
+008=<acronym title='Sortiranje po broju ispadanja'><b>&#9660;</b></acronym>
+009=<acronym title='Sortiranje po vremenu igre'>PT</acronym>
+010=<acronym title='Sortiranje po igrama'>Igrice</acronym>
+011=<acronym title='Sortiranje po pobedama'>P</acronym>
+012=<acronym title='Poredaj po nerešenom rezultatu'>N</acronym>
+013=<acronym title='Sortiranje po porazima'>I</acronym>
+014=<acronym title='Sortiranje po gol-razlici'>Gol razlika</acronym>
+015=<acronym title='Sortiranje po Gol razlika'>Raz.</acronym>
+016=<acronym title='Sortiranje po osvojenim bodovima'>Poeni</acronym>
+017=<acronym title='Sortiranje po omjeru bodova'>Raz.</acronym>
+018=<acronym title='Sortiranje po prosječnom broju poena po utakmici'>Ø</acronym>

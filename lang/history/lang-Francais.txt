@@ -1,0 +1,19 @@
+000=[<acronym title='Historique des modules complémentaires pour le LMO © Marcus Schug'>©</acronym>]
+001=Table éternelle
+002=Champion
+003=Descente
+004=
+005=Erreur : Ligue introuvable!
+006=
+007=<acronym title='Tri par nombre de championnats'>C</acronym>
+008=<acronym title='Tri par nombre de relégations'><b>&#9660;</b></acronym>
+009=<acronym title='Tri par temps de jeu'>S</acronym>
+010=<acronym title='Tri par jeux'>Jeux</acronym>
+011=<acronym title='Tri par victoires'>G</acronym>
+012=<acronym title='Trier par cravate'>D</acronym>
+013=<acronym title='Tri par défaites'>P</acronym>
+014=<acronym title='Tri par différence de buts'>Différence de buts</acronym>
+015=<acronym title='Tri par différence de buts'>Diff.</acronym>
+016=<acronym title='Tri par points marqués'>Points</acronym>
+017=<acronym title='Tri par rapport de points'>Diff.</acronym>
+018=<acronym title='Tri par moyenne de points par match'>Ø</acronym>

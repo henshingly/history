@@ -1,0 +1,19 @@
+000=[<acronym title='Addon history voor de LMO © Marcus Schug'>©</acronym>]
+001=Eeuwige tafel
+002=Kampioen
+003=Degradatie
+004=
+005=Fout: Competitiebestand niet gevonden!
+006=
+007=<acronym title='Sorteren op aantal kampioenschappen'>K</acronym>
+008=<acronym title='Sorteren op aantal degradaties'><b>&#9660;</b></acronym>
+009=<acronym title='Sorteren op speeltijden'>ST</acronym>
+010=<acronym title='Sorteer op spellen'>Wedstrijden</acronym>
+011=<acronym title='Sorteren op overwinningen'>W</acronym>
+012=<acronym title='Sorteer op Gelijk'>G</acronym>
+013=<acronym title='Sorteer op nederlagen'>N</acronym>
+014=<acronym title='Sorteren op doelsaldo'>Doelsaldo</acronym>
+015=<acronym title='Sorteren op doelsaldo'>versch.</acronym>
+016=<acronym title='Sorteren op gescoorde punten'>Punten</acronym>
+017=<acronym title='Sorteren op puntverhouding'>versch.</acronym>
+018=<acronym title='Sorteren op gemiddelde punten per spel'>Ø</acronym>

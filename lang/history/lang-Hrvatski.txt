@@ -1,0 +1,19 @@
+000=[<acronym title='Addon history za LMO © Marcus Schug'>©</acronym>]
+001=Vječni stol
+002=Prvak
+003=Silazak
+004=
+005=Fehler: Liga nicht gefunden!
+006=
+007=<acronym title='Sortiranje po broju prvenstava'>P</acronym>
+008=<acronym title='Razvrstavanje po broju ispadanja'><b>&#9660;</b></acronym>
+009=<acronym title='Razvrstavanje po terminima utakmica'>S</acronym>
+010=<acronym title='Razvrstavanje po igrama'>Nogometne igre</acronym>
+011=<acronym title='Razvrstavanje po pobjedama'>P</acronym>
+012=<acronym title='Poredaj po izjednačenju'>C</acronym>
+013=<acronym title='Razvrstavanje po porazima'>I</acronym>
+014=<acronym title='Razvrstavanje po gol razlici'>Gol razlika</acronym>
+015=<acronym title='Razvrstavanje po gol razlici'>Raz.</acronym>
+016=<acronym title='Razvrstavanje po osvojenim bodovima'>Bodovi</acronym>
+017=<acronym title='Razvrstavanje po omjeru bodova'>Raz.</acronym>
+018=<acronym title='Razvrstavanje po prosječnim bodovima po utakmici'>Ø</acronym>
