@@ -8,6 +8,11 @@
 
 Addon für den LMO.
 
+> [!NOTE]
+> __Systemvorraussetzung:__  
+> Lauffähiger (Liga Manager Online [(LMO-klassisch)](https://github.com/henshingly/lmo_php8)  
+> PHP: >7.4
+
 Mit diesem Addon erstellst Du aus Ligadateien des LMO, aus mehreren Spielzeiten, eine History Tabelle.
 
 ### Installation
@@ -97,12 +102,45 @@ $his_template='mytemplate'
 ?>
 ```
 
+___
+[Beispielseite](http://lmo8.bplaced.net/history.php) für die Einbindung per `ìnclude()`
 
+Der Code dieser PHP-Beispielseite lautet
+
+```php
+<?php
+require_once("./history/init.php");
+$his_liga = "1l_2024-25.l98";
+$his_folder = "national/1Bundesliga";
+$his_template = "history_all";
+$his_headline = ".: Ewige Tabelle der 1. Fussball Bundesliga 1963/64 - 2024/25 :.";
+include (PATH_TO_ADDONDIR."/history/lmo-history.php");
+?>
+```
+
+___
+[Beispielseite](http://lmo8.bplaced.net/history.html) für die Einbindung per `<iframe>`
+
+Der Code dieser HTML-Beispielseite lautet
+
+```html
+<center>
+<iframe width=1012 height=600 align=center src="http://lmo8.bplaced.net/history/addon/history/lmo-history.php?his_liga=1l_2024-25.l98&his_template=history_all&his_headline=.: Ewige Tabelle der 1. Fussball Bundesliga 1963/64 - 2024/25 :.&his_folder=national/1Bundesliga"></iframe>
+</center>
+```
+
+___
+___
 # History (english)
 
 Addon for the LMO.
 
 With this addon you can create a history table from LMO league files from several seasons.
+
+> [!NOTE]
+> **System requirements:**  
+> Running (Liga Manager Online [(LMO-classic)](https://github.com/henshingly/lmo_php8)  
+> PHP: >7.4
 
 ### Installation
 
@@ -163,7 +201,7 @@ URL parameter:
 require_once(‘PathToLMO/init.php’); //edit PathToLMO
 $his_liga = ‘xyz.l98’; //the first LMO league file
 $his_folder = ‘archiv/bundesliga’; //the path to the l98 files from the old seasons
-$his_headline = ‘ÜBERSCHRIFT_DER_HISTORY_TABELLE’; //the headline that should be in the table
+$his_headline = ‘HEADLINE_OF_THE_HISTORY_TABLE’; //the headline that should be in the table
 // if $his_headline is not specified, ‘History table’ is output as the default value
 include (PATH_TO_ADDONDIR.‘/history/lmo-history.php’);
 ?>
@@ -189,4 +227,31 @@ his_template=mytemplate
 $his_template=‘mytemplate’
 ...
 ?>
+```
+
+___
+[Example page](http://lmo8.bplaced.net/history_eng.php?lmouserlang=English) for integration via `ìnclude()`
+
+The code of this PHP-example page is
+
+```php
+<?php
+require_once(‘./history/init.php’);
+$his_liga = ‘1l_2024-25.l98’;
+$his_folder = ‘national/1Bundesliga’;
+$his_template = ‘history_all’;
+$his_headline = ‘: Perpetual table of the 1st Bundesliga 1963/64 - 2024/25 :.’;
+include (PATH_TO_ADDONDIR.‘/history/lmo-history.php’);
+?>
+```
+
+___
+[Example page](http://lmo8.bplaced.net/history_eng.html) for integration via `<iframe>`
+
+The code of this HTML-example page is
+
+```html
+<center>
+<iframe width=1012 height=600 align=center src=‘http://lmo8.bplaced.net/history/addon/history/lmo-history.php?his_liga=1l_2024-25.l98&his_template=history_all&his_headline=.: Perpetual table of the 1st Bundesliga 1963/64 - 2024/25 :.&his_folder=national/1Bundesliga’></iframe>
+</centre>
 ```
