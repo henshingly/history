@@ -172,14 +172,14 @@ URL parameter:
 * `his_ligen` //Leagues to be used to calculate the perpetual table, except the current league //only use in an emergency
 * `his_folder` //Folder with the league archive
 * `his_sort` //Sort default of the perpetual table
-  * 0  //Standard sorting by points
+  * 0  //Sorting by points (default)
   * 1  //Sort by games
   * 2  //Sort by wins
   * 3  //Sorting by goals
   * 4  //Sorting by points per game
   * 5  //Sorting by +goals
   * 6  //Sorting by diff. +goals/goals
-  * 7  //Sorting by Ø points per game
+  * 7  //Sorting by average points per game
   * 8  //Sorting by diff. +points/points
   * 9  //Sorting by +points
   * 10 //Sorting by championships
