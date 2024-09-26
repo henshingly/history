@@ -38,7 +38,7 @@ a:link {color: #FFFFFF; text-decoration: none;} a:visited {color: #FFFFFF; text-
       <td align="center"><!--PlusGoals--> : <!--MinusGoals--></td>
       <td align="center"><!--Content_Goalsdiff--></td>
       <td align="center"><!--PlusPoints--> : <!--MinusPoints--></td>
-      <td align="center"><!--Content_Pointsdiff--></td>    
+      <td align="center"><!--Content_Pointsdiff--></td>
       <td align="center"><!--Content_Points_Average--></td>
     </tr>
     <!-- END Inhalt -->

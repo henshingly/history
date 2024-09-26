@@ -36,45 +36,53 @@
   *    his_liga:     Dateiname der aktuellen Liga
   *
   *    his_ligen:    Ligen die zur Berechnung der ewigen Tabelle genutzt werden sollen,
-  *                  außer die aktuelle Liga. //nur im Notfall nutzen
+  *                  auÃŸer die aktuelle Liga. //nur im Notfall nutzen
   *
   *    his_folder:   Ordner mit dem Ligenarchiv
   *
   *    his_sort:     Sortiervorgabe der ewigen Tabelle
   *                  0 Standartsortierung nach Punkten
-  *                  1 Sortierung nach Spielen
-  *                  2 Sortierung nach Siegen
-  *                  3 Sortierung nach Toren
-  *                  4 Sortierung nach Punkte/Spiel
+  *                  1 Sortierung nach Siegen
+  *                  2 Sortierung nach Unentschieden
+  *                  3 Sortierung nach Niederlagen
+  *                  4 Sortierung nach Spielen
+  *                  5 Sortierung nach geschossen Toren
+  *                  6 Sortierung nach TorverhÃ¤ltnis
+  *                  7 Sortierung nach Durchschnitt Punkte pro Spiel
+  *                  8 Sortierung nach PunkteverhÃ¤ltnis
+  *                  9 Sortierung nach +Punkten
+  *                 10 Sortierung nach Meisterschaften
+  *                 11 Sortierung nach Abstiegen
+  *                 12 Sortierung nach Saisons
   *
   *    his_template: Template, dass benutzt werden soll
   *
   *  Beispiel 1: 1.Bundesliga Fussball 2004/2005 mit his_ligen
-  *  Sollte nur genutzt werden wenn Zugriff über FTP nicht möglich ist.
+  *  Sollte nur genutzt werden wenn Zugriff Ã¼ber FTP nicht mÃ¶glich ist.
   *    his_liga = 1bundesliga2004.l98
   *    his_ligen =1bundesliga2003.l98,1bundesliga2002.l98,1bundesliga2001.l98,1bundesliga2000.l98
   *
-  *  Einbindung über IFrame:
+  *  Einbindung Ã¼ber IFrame:
   *      <iframe src="<url_to_lmo>/addon/history/lmo-history.php?his_liga=1bundesliga2004.l98&his_ligen=1bundesliga2003.l98,1bundesliga2002.l98,1bundesliga2001.l98,1bundesliga2000.l98"><url_to_lmo>/addon/history/lmo-history.php?his_liga=1bundesliga2004.l98&his_ligen=1bundesliga2003.l98,1bundesliga2002.l98,1bundesliga2001.l98,1bundesliga2000.l98</iframe>
-  *    (die Parameter his_sort und his_template bei Bedarf mit &amp;his_sort=<integer>&amp;his_template=<integer> anhängen
+  *    (die Parameter his_sort und his_template bei Bedarf mit &amp;his_sort=<integer>&amp;his_template=<integer> anhÃ¤ngen
   *
-  *  Einbindung über include:
+  *  Einbindung Ã¼ber include:
   *      $his_liga = '1bundesliga2004.l98'
   *      $his_ligen= '1bundesliga2003.l98,1bundesliga2002.l98,1bundesliga2001.l98,1bundesliga2000.l98'
   *      (auch hier bei Bedarf his_sort und/oder his_template angeben: $a = <integer>;$his_template = '<string>'; )
   *      include ("<pfad_zum_lmo>/addon/history/lmo-history.php.php");
   *
   *  Beispiel 2: 1.Bundesliga Fussball 2004 / 2005 mit his_liga
-  *  Sollte nur genutzt werden wenn Zugriff über FTP nicht möglich ist.
+  *  Sollte nur genutzt werden wenn Zugriff Ã¼ber FTP nicht mÃ¶glich ist.
   *    his_liga = 1bundesliga2004.l98
   *    his_folder = archiv/bundesliga
   *
-  *    Einbindung über IFrame:
+  *    Einbindung Ã¼ber IFrame:
   *      <iframe src="<url_to_lmo>/addon/history/lmo-history.php?his_liga=1bundesliga2004.l98&his_folder=archiv/bundesliga</iframe>
   *      <iframe src="<url_to_lmo>/addon/history/lmo-history.php?his_liga=1bundesliga2004.l98&his_ligen=1bundesliga2003.l98,1bundesliga2002.l98,1bundesliga2001.l98,1bundesliga2000.l98"></iframe>
-  *      (die Parameter his_sort und his_template bei Bedarf mit &amp;his_sort=<integer>&amp;his_template=<integer> anhängen
+  *      (die Parameter his_sort und his_template bei Bedarf mit &amp;his_sort=<integer>&amp;his_template=<integer> anhÃ¤ngen
   *
-  *    Einbindung über include:
+  *    Einbindung Ã¼ber include:
   *      $his_liga = '1bundesliga2004.l98'
   *      $his_folder = archiv/bundesliga
   *    // auch hier bei Bedarf his_sort und/oder his_template angeben:
@@ -94,13 +102,13 @@
   * *lang.txt-dateien ins Verzeichnis <lmo_root>/lang/history/ kopieren
   * cfg.txt ins Verzeichnis <lmo_root>/config/history/ kopieren
   *
-  * Im Adminmenü des LMO's unter ->Optionen ->Addons ->history die 4 notwendigen Angaben
-  * eingeben und speichern. Beim nächsten Aufruf des Addons werden die notwendigen
+  * Im AdminmenÃ¼ des LMO's unter ->Optionen ->Addons ->history die 4 notwendigen Angaben
+  * eingeben und speichern. Beim nÃ¤chsten Aufruf des Addons werden die notwendigen
   * CSV-Dateien dann im Output Ordner erstellt.
   *
   * Hinweis:
   * Es ist nicht gestattet den Hinweis auf den Autor zu entfernen!
-  * Eigene Templates müssen den Hinweis auf Autor des Scripts enthalten.
+  * Eigene Templates mÃ¼ssen den Hinweis auf Autor des Scripts enthalten.
   *
   */
 
@@ -132,14 +140,12 @@ include(PATH_TO_ADDONDIR . "/history/lmo-history_func.php");
 include(PATH_TO_ADDONDIR . "/history/lmo-his_liga_create.php");
 
 // Language selection
-if ($einsprachwahl==1)
-{
+if ($einsprachwahl==1) {
   $output_sprachauswahl = getLangSelector();
 }
 
 // If IFRAME - complete HTML document
-if (basename($_SERVER['PHP_SELF']) == "lmo-history.php")
-{?>
+if (basename($_SERVER['PHP_SELF']) == "lmo-history.php") {?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
           "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -157,20 +163,17 @@ if (basename($_SERVER['PHP_SELF']) == "lmo-history.php")
   *TeamLongName|TeamnameAbbrevation|Points+|Points-|Goals+|Goals-|Games|Win|Draw|Loss|  Marking |TeamShortName
   *  Teamname  |     Kurzname      | Pkt.+ | Pkt.- | Tore+| Tore-| Sp. | + | o  | -  |Markierung| Mittelname
 **/
-if ($cfgarray['history']['lmo_autocreate'] == 1)
-{
+if ($cfgarray['history']['lmo_autocreate'] == 1) {
   scan($archivFolder);
 }
 
-if (file_exists(PATH_TO_LMO . '/' . $diroutput . $m_liga . '-tab.csv'))
-{
+if (file_exists(PATH_TO_LMO . '/' . $diroutput . $m_liga . '-tab.csv')) {
   $template = new HTML_Template_IT(PATH_TO_TEMPLATEDIR . '/history' );
   $template -> loadTemplatefile($m_template . ".tpl.php");
 
   $m_tabelle = array();
   $handle = fopen (PATH_TO_LMO . '/' . $diroutput . $m_liga . '-tab.csv',"rb");
-  while (($data = fgetcsv ($handle, 1000, "|")) !== FALSE)
-  {
+  while (($data = fgetcsv ($handle, 1000, "|")) !== FALSE) {
     $m_tabelle[$data[0]] = $data;
     $m_tabelle[$data[0]][10] = "";
     //Mannschaft in Liga
@@ -184,28 +187,23 @@ if (file_exists(PATH_TO_LMO . '/' . $diroutput . $m_liga . '-tab.csv'))
   }
   fclose($handle);
   // Converting the passed leagues into an array
-  if ($m_ligen != '')
-  {
+  if ($m_ligen != '') {
     $m_ligen = explode(', ', $m_ligen);
-    for ($i = 0; $i < count($m_ligen); $i ++)
-    {
+    for ($i = 0; $i < count($m_ligen); $i ++) {
       add_saison($m_tabelle,PATH_TO_LMO . '/' . $diroutput, $m_ligen[$i]);
     }
   }
-  else
-  {
+  else {
     addLeague($archivFolder, $m_tabelle);
   }
   // Rekeying the table
   $r_tabelle = array();
   $keys = array_keys($m_tabelle);
-  for ($i = 0; $i < count($keys); $i ++)
-  {
+  for ($i = 0; $i < count($keys); $i ++) {
     $r_tabelle[] = $m_tabelle[$keys[$i]];
   }
   $m_tabelle = $r_tabelle;
-  switch($m_sort)
-  {
+  switch($m_sort) {
     case(0):  usort($m_tabelle,'cmp0');   break; // Sorting by points (default)
     case(1):  usort($m_tabelle,'cmp1');   break; // Sorted by victories
     case(2):  usort($m_tabelle,'cmp2');   break; // Sorted by draw
@@ -221,15 +219,12 @@ if (file_exists(PATH_TO_LMO . '/' . $diroutput . $m_liga . '-tab.csv'))
     case(12): usort($m_tabelle,'cmp12');  break; // Sorting by seasons
   }
   $m_anzteams = count($m_tabelle);
-  for ($j = 0; $j < $m_anzteams; $j ++)
-  {
+  for ($j = 0; $j < $m_anzteams; $j ++) {
     $template -> setCurrentBlock("Inhalt");
-    if (basename($_SERVER['PHP_SELF']) == "lmo-history.php")
-    {
+    if (basename($_SERVER['PHP_SELF']) == "lmo-history.php") {
       $sort_link = URL_TO_ADDONDIR . "/history/lmo-history.php?his_liga=$m_liga&amp;his_headline=$m_headline&amp;his_folder=$archivFolder&amp;his_template=$m_template&amp;";
     }
-    else
-    {
+    else {
       $sort_link = $_SERVER['SCRIPT_NAME']."?";
     }
     $template -> setVariable("LINK", $sort_link);
@@ -256,8 +251,7 @@ if (file_exists(PATH_TO_LMO . '/' . $diroutput . $m_liga . '-tab.csv'))
     $template -> setVariable(array("TeamShort"              => $m_tabelle[$j][1]));
     $template -> setVariable(array("3Points"                => $m_3punkte));
     $template -> setVariable(array("PlusPoints"             => $m_tabelle[$j][2]));
-    if ($m_tabelle[$j][3] != '')
-    {
+    if ($m_tabelle[$j][3] != '') {
       $template -> setVariable(array("MinusPoints"          => $m_tabelle[$j][3]));
       if (($t_diff = $m_tabelle[$j][2] - $m_tabelle[$j][3]) > 0) $t_diff = '+' . $t_diff;
       $template -> setVariable(array("Content_Pointsdiff"   => $t_diff));
@@ -271,12 +265,10 @@ if (file_exists(PATH_TO_LMO . '/' . $diroutput . $m_liga . '-tab.csv'))
     $template -> setVariable(array("Content_Draw"           => $m_tabelle[$j][8]));
     $template -> setVariable(array("Content_Lost"           => $m_tabelle[$j][9]));
     $style = '';
-    if ($m_tabelle[$j][6] > 0)
-    {
+    if ($m_tabelle[$j][6] > 0) {
       $m_durch = round($m_tabelle[$j][2] / $m_tabelle[$j][6], 2);
     }
-    else
-    {
+    else {
       $m_durch = 0;
     }
     $template -> setVariable(array("Content_Points_Average" => $m_durch));
@@ -284,8 +276,7 @@ if (file_exists(PATH_TO_LMO . '/' . $diroutput . $m_liga . '-tab.csv'))
     $template -> setVariable(array("Content_Descents"       => $m_tabelle[$j][13]));
     $template -> setVariable(array("Content_Playtimes"      => $m_tabelle[$j][14]));
     $style = '';
-    if (strpos($m_tabelle[$j][10], 'F') !== FALSE)  //FavTeam
-    {
+    if (strpos($m_tabelle[$j][10], 'F') !== FALSE)  //FavTeam {
       $style .= "font-weight:bolder;";
       $template -> setVariable(array("Style" => $style));
     }
@@ -298,14 +289,12 @@ if (file_exists(PATH_TO_LMO . '/' . $diroutput . $m_liga . '-tab.csv'))
   $template -> setVariable("Language_Selection", $output_sprachauswahl);
   $template -> show();
 }
-else
-{
+else {
   echo getMessage($text['history'][5] . " " . $his_liga, TRUE);
 }
 
 // If IFRAME - complete HTML document
-if (basename($_SERVER['PHP_SELF']) == "lmo-history.php")
-{?>
+if (basename($_SERVER['PHP_SELF']) == "lmo-history.php") {?>
 </body>
 </html><?php
 }?>

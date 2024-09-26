@@ -16,4 +16,4 @@
 015=<acronym title='Sorting by goal difference'>Diff.</acronym>
 016=<acronym title='Sorting by points scored'>Points</acronym>
 017=<acronym title='Sorting by point ratio'>Diff.</acronym>
-018=<acronym title='Sorting by average points per game'>Ø</acronym>	
+018=<acronym title='Sorting by average points per game'>Ø</acronym>
