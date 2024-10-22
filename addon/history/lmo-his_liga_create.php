@@ -45,68 +45,68 @@ $defdateformat = "";
 // Open league file
 include PATH_TO_LMO . "/lmo-openfile.php";
 
-$fp = fopen(PATH_TO_LMO . '/' . $diroutput . basename($file) . '-tab.csv', "wb"); // Table CSV file
+$fp = fopen(PATH_TO_LMO . '/' . $diroutput . basename($file) . '-tab.csv', "wb");      //Table CSV file
 if ($st > 0) {
-  $rounds = $wert;
-  $act = $st;
+    $rounds = $wert;
+    $act = $st;
 }
 else {
-  $act = $stx;
+    $act = $stx;
 }
 for ($i1 = 0; $i1 < $anzsp; $i1 ++) {
-  if (isset($goala[$act-1][$i1]) && $goala[$act-1][$i1] == "-1") $goala[$act-1][$i1] = "_";
-  if (isset($goalb[$act-1][$i1]) && $goalb[$act-1][$i1] == "-1") $goalb[$act-1][$i1] = "_";
+    if (isset($goala[$act-1][$i1]) && $goala[$act-1][$i1] == "-1") $goala[$act-1][$i1] = "_";
+    if (isset($goalb[$act-1][$i1]) && $goalb[$act-1][$i1] == "-1") $goalb[$act-1][$i1] = "_";
 }
 
 $endtab = $anzst;
 include(PATH_TO_LMO . "/lmo-calctable.php");
 for ($i1 = 0; $i1 < $anzsp; $i1 ++) {
-  if (isset($goala[$act-1][$i1]) && $goala[$act-1][$i1] == "_") $goala[$act-1][$i1] = "-1";
-  if (isset($goalb[$act-1][$i1]) && $goalb[$act-1][$i1] == "_") $goalb[$act-1][$i1] = "-1";
+    if (isset($goala[$act-1][$i1]) && $goala[$act-1][$i1] == "_") $goala[$act-1][$i1] = "-1";
+    if (isset($goalb[$act-1][$i1]) && $goalb[$act-1][$i1] == "_") $goalb[$act-1][$i1] = "-1";
 }
 $x = 0;
 $j = 1;
 foreach ($tab0 as $y) {
-  $x ++;
-  $tabledata = explode('|', chunk_split($y, 8, "|"));
+    $x ++;
+    $tabledata = explode('|', chunk_split($y, 8, "|"));
 
-  fwrite($fp, $teams[$tabledata[4] - 50000000] . '|');                               //TeamLongName    (long Teamname)
-  fwrite($fp, $teamk[$tabledata[4] - 50000000] . '|');                               //TeamAbbrevation (short Teamname)
-  fwrite($fp, applyFactor($punkte[$tabledata[4] - 50000000], $pointsfaktor) . '|');  //Points+
-  if ($minus == 2) {
-    fwrite($fp, applyFactor($negativ[$tabledata[4] - 50000000], $pointsfaktor));     //Points-
-  }
-  fwrite($fp, '|');
-  fwrite($fp, applyFactor($etore[$tabledata[4] - 50000000], $goalfaktor) . '|');     //Goals+
-  fwrite($fp, applyFactor($atore[$tabledata[4] - 50000000], $goalfaktor) . '|');     //Goals-
-  fwrite($fp, $spiele[$tabledata[4] - 50000000] . '|');                              //Games
-  fwrite($fp, $siege[$tabledata[4] - 50000000] . '|');                               //Win
-  fwrite($fp, $unent[$tabledata[4] - 50000000] . '|');                               //Draw
-  fwrite($fp, $nieder[$tabledata[4] - 50000000] . '|');                              //Loss
-  if (($tabledata[4] - 50000000) == $favteam) {                                      //Marking Fav Team
-    fwrite($fp, "F");
-  }
-  if (($x == 1) && ($champ != 0)) {
-    fwrite($fp, "M");
-    $j = 2;
-  }
-  if (($x >= $j) && ($x < $j+$anzcl) && ($anzcl > 0)) {
-    fwrite($fp, "C");
-  }
-  if (($x >= $j + $anzcl) && ($x < $j + $anzcl + $anzck) && ($anzck > 0)) {
-    fwrite($fp, "Q");
-  }
-  if (($x >= $j + $anzcl + $anzck) && ($x < $j + $anzcl + $anzck + $anzuc) && ($anzuc > 0)) {
-    fwrite($fp, "U");
-  }
-  if (($x <= $anzteams - $anzab) && ($x > $anzteams - $anzab - $anzar) && ($anzar > 0)) {
-    fwrite($fp, "R");
-  }
-  if (($x <= $anzteams) && ($x > $anzteams - $anzab) && ($anzab > 0)) {
-    fwrite($fp, "A");
-  }
-  fwrite($fp, '|' . $teamm[$tabledata[4] - 50000000]);                               //TeamShortName (Medium-length Name)
-  fwrite($fp, "\n");
+    fwrite($fp, $teams[$tabledata[4] - 50000000] . '|');                               //TeamLongName (long Teamname)
+    fwrite($fp, $teamk[$tabledata[4] - 50000000] . '|');                               //TeamAbbrevation (short Teamname)
+    fwrite($fp, applyFactor($punkte[$tabledata[4] - 50000000], $pointsfaktor) . '|');  //Points+
+    if ($minus == 2) {
+        fwrite($fp, applyFactor($negativ[$tabledata[4] - 50000000], $pointsfaktor));   //Points-
+    }
+    fwrite($fp, '|');
+    fwrite($fp, applyFactor($etore[$tabledata[4] - 50000000], $goalfaktor) . '|');     //Goals+
+    fwrite($fp, applyFactor($atore[$tabledata[4] - 50000000], $goalfaktor) . '|');     //Goals-
+    fwrite($fp, $spiele[$tabledata[4] - 50000000] . '|');                              //Games
+    fwrite($fp, $siege[$tabledata[4] - 50000000] . '|');                               //Win
+    fwrite($fp, $unent[$tabledata[4] - 50000000] . '|');                               //Draw
+    fwrite($fp, $nieder[$tabledata[4] - 50000000] . '|');                              //Loss
+    if (($tabledata[4] - 50000000) == $favteam) {                                      //Marking Fav Team
+        fwrite($fp, "F");
+    }
+    if (($x == 1) && ($champ != 0)) {
+        fwrite($fp, "M");
+        $j = 2;
+    }
+    if (($x >= $j) && ($x < $j+$anzcl) && ($anzcl > 0)) {
+        fwrite($fp, "C");
+    }
+    if (($x >= $j + $anzcl) && ($x < $j + $anzcl + $anzck) && ($anzck > 0)) {
+        fwrite($fp, "Q");
+    }
+    if (($x >= $j + $anzcl + $anzck) && ($x < $j + $anzcl + $anzck + $anzuc) && ($anzuc > 0)) {
+        fwrite($fp, "U");
+    }
+    if (($x <= $anzteams - $anzab) && ($x > $anzteams - $anzab - $anzar) && ($anzar > 0)) {
+        fwrite($fp, "R");
+    }
+    if (($x <= $anzteams) && ($x > $anzteams - $anzab) && ($anzab > 0)) {
+        fwrite($fp, "A");
+    }
+    fwrite($fp, '|' . $teamm[$tabledata[4] - 50000000]);                               //TeamShortName (Medium-length Name)
+    fwrite($fp, "\n");
 }
 fclose($fp);
 ?>
